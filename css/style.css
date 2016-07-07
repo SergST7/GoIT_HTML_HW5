@@ -67,10 +67,13 @@ label {
 ----------------------*/
 
 header {
+  width: 1215px;
   height: 40px;
+  margin: 0 auto;
   background: url("../img/top-menu-bg.png");
   font-size: 14px;
   text-align: center;
+  overflow: hidden;
 }
 
 .header-registration {
