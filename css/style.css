@@ -20,18 +20,32 @@
   font-style: normal;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Helvetica Neue Roman", "Times New Roman", sans-serif;
   background-color: #282828;
 }
 
 .wrapper {
-  width: 1215px;
-  height: 1064px;
+  /*width: 1215px;*/
+  height: 100%;
   margin: 0 auto;
-  background: url(../img/Background-copy.jpg) no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
+  text-align: center;
+  background: url(../img/Background-copy.jpg) no-repeat center;
+  /*-webkit-background-size: cover;*/
+  /*background-size: cover;*/
+  overflow: hidden;
+
+}
+
+.wrapper:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .clearfix:after {
@@ -124,16 +138,13 @@ nav {
 ----------------------*/
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 96%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .center-wrapper {
   width: 560px;
-  height: 613px;
+  /*height: 613px;*/
   background-color: rgba(0, 0, 0, 0.63);
 }
 
@@ -151,13 +162,48 @@ nav {
   margin: auto;
 }
 
-.facebook {
+/*.facebook {*/
+/*display: block;*/
+/*width: 276px;*/
+/*height: 35px;*/
+/*margin-top: 36px;;*/
+/*border: 0;*/
+/*background: url("../img/facebook.png") no-repeat;*/
+/*}*/
+
+.center-form button {
   display: block;
   width: 276px;
   height: 35px;
-  margin-top: 36px;;
+  padding: 0;
+  border-radius: 5px;
   border: 0;
-  background: url("../img/facebook.png") no-repeat;
+  margin-top: 35px;
+  background-image: linear-gradient(to bottom, #556a9f, #203a75);
+  color: #fff;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.facebook-logo {
+  float: left;
+  padding: 0 15px;
+  border-right: 1px solid #203a75;
+  font-size: 26px;
+}
+
+.facebook-txt {
+  float: left;
+  padding: 0 15px 0 30px;
+  border-left: 1px solid #556a9f;
+  font-size: 15px;
+}
+
+.facebook-arrow {
+  float: left;
+  font-size: 18px;
 }
 
 .ou-line {
@@ -244,4 +290,5 @@ label {
   color: #ccc;
   font-size: 11px;
   text-align: center;
+  padding-bottom: 20px;
 }
