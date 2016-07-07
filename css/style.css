@@ -1,3 +1,7 @@
+/*-------------------------
+    #SECTION-GLOBAL
+----------------------*/
+
 @font-face {
   font-family: 'Helvetica Neue Bold';
   src: url('../fonts/HelveticaNeueBold/helveticaneuecyr-bold-webfont.eot');
@@ -20,6 +24,12 @@
   font-style: normal;
 }
 
+@media screen and (max-width: 760px) {
+  body{
+    width: 760px;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -27,6 +37,11 @@ html, body {
 body {
   font-family: "Helvetica Neue Roman", "Times New Roman", sans-serif;
   background-color: #fff;
+}
+
+label {
+  color: #ccc;
+  font-size: 14px;
 }
 
 .wrapper {
@@ -38,7 +53,6 @@ body {
   /*-webkit-background-size: cover;*/
   /*background-size: cover;*/
   overflow: hidden;
-
 }
 
 .wrapper:before {
@@ -61,6 +75,7 @@ body {
 header {
   font-size: 14px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .header-registration {
@@ -265,10 +280,6 @@ nav {
   inset 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
-label {
-  color: #ccc;
-  font-size: 14px;
-}
 
 [type="submit"] {
   display: block;
